@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "thapar_ws_backend": {
+      "main": "src/thapar_ws_backend/main.mo",
+      "type": "motoko"
+    },
+    "thapar_ws_frontend": {
+      "dependencies": [
+        "thapar_ws_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/thapar_ws_frontend/src/index.html"
+      },
+      "source": [
+        "src/thapar_ws_frontend/assets",
+        "dist/thapar_ws_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
